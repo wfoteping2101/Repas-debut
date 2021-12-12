@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'repas_theme.dart';
+import 'home.dart';
 
 void main() {
   // 1
@@ -10,19 +12,11 @@ class repas extends StatelessWidget {
   const repas({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    // TODO: Create theme
-    // TODO: Apply Home widget
-    // 3
+    final theme = RepasTheme.light();
     return MaterialApp(
-      // TODO: Add theme
+      theme: theme,
       title: 'Repas',
-      // 4
-      home: Scaffold(
-        // TODO: Style the title
-        appBar: AppBar(title: const Text('Repas')),
-        // TODO: Style the body text
-        body: const Center(child: Text('Mettons-nous à cuisiner 👩‍🍳')),
-      ),
+      home: const Home(),
     );
   }
 }
